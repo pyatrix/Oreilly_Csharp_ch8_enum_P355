@@ -16,5 +16,12 @@ namespace Oreilly_Csharp_ch8_enum_P355
         {
             InitializeComponent();
         }
+
+        Random random = new Random();
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Card card = new Card((Suits)random.Next(4), (Values)random.Next(1, 14));
+            MessageBox.Show(card.Name);
+        }
     }
 }
